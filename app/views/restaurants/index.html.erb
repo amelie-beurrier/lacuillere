@@ -1,0 +1,10 @@
+<h1>101 best restaurants</h1>
+<p><%= link_to "Submit your favorite restaurant", new_restaurant_path %></p>
+
+<% @restaurants.each do |restaurant| %>
+  <h2><%= restaurant.name %></h2>
+  <p><i><%= restaurant.address %></i></p>
+  <p><%= link_to "Details", restaurant_path(restaurant) %></p>
+<% end %>
+
+<p><%= link_to "Submit your favorite restaurant", new_restaurant_path %></p>
